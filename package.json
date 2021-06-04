@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/GustavoDevelop/node-06-restserver#readme",
   "dependencies": {
+    "axios": "^0.21.1",
     "dotenv": "^9.0.2",
     "express": "^4.17.1",
     "heroku": "^7.54.0",

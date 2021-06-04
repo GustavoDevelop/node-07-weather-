@@ -107,7 +107,7 @@
         }, 
         "responses": {
           "200": {
-            "description": "The user updated",
+            "description": "The user has been updated",
             "content":{
               "application/json":{
                 "schema":{
@@ -155,12 +155,12 @@
           "id":{
             "description": "The user id.",
             "type": "integer",          
-            "example": "3"
+            "example": "1"
           },
           "name":{
             "description": "The user name.",
             "type":"string",          
-            "example":"Adrian"
+            "example":"Example"
           }
         }
       }
