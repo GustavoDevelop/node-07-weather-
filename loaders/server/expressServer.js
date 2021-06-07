@@ -11,7 +11,9 @@ class ExpressServer {
         this.app = express();
         this.port = config.port;
         this.basePathWeather = `${config.api.prefix}/weather`;
+
         this._middlewares();
+
         this._swaggerConfig();
 
         this._routes();
@@ -80,4 +82,4 @@ class ExpressServer {
 
 }
 
-module.exports = ExpressServer
+module.exports = ExpressServer;

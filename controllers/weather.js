@@ -9,7 +9,8 @@ const axios = require('axios');
 
 
 const test = async (req, res) => {
-    const response = await axios.get('https://reqres.in/api/users')
+
+    const response = await axios.get('https://reqres.in/api/users?page=2')
        
      res.json(response.data);
  };
