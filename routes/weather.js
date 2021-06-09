@@ -1,9 +1,9 @@
 const { Router } = require('express');
 const {
-    test,
+    cities,
 } = require('../controllers/weather');
 const router = Router();
 
-router.get('/test', test);
+router.get('/cities/:city', cities);
 
 module.exports = router;
