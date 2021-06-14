@@ -13,12 +13,18 @@ class CityRepository {
 
     async findCities(city){  
        
-        const url = (`${this.pathBase}${city}.json?access_token=${this.apiKey}&limit=${this.apikey}&language=${this.language}`);
-        logger.silly(url);
+        const instance = axios.create({
+            baseURL: `${this.pathBase}${city}.json`,
+            params: {
+                'access_token': this.apiKey,
+                'limit': this.limit,
+                'language': this.language
+            },
+        });
+        
+        const response = await instance.get();
 
-        const response = await axios.get(url);
-
-        logger.silly(response);
+        
         return response.data;
     }
 }
