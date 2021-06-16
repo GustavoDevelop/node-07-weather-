@@ -26,6 +26,8 @@ class CityRepository {
 
         
         return response.data;
+    }catch(err){
+        throw err;
     }
 }
 

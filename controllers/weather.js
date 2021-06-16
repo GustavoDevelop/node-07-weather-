@@ -1,5 +1,5 @@
 const express = require('express');
-
+const {findCities} = require('../services/cityServices');
 
 const CityRepository = require('../repositories/cityRepository');
 const repository = new CityRepository();
@@ -16,7 +16,7 @@ const cities = async (req, res) => {
 
     
        
-     res.json(await repository.findCities(req.params.city));
+     res.json(await findCities(req.params.city));
  }; 
  
  module.exports = {
