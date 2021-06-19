@@ -14,7 +14,9 @@ const repository = new CityRepository();
 
 
 const cities = async (req, res) => {
-    res.json(new Success(await findCities(req.params.city)));
+  const cities = await findCities(req.params.city);
+  const success = new Success(cities);
+  res.json(success);
  }; 
  
  module.exports = {
