@@ -12,7 +12,7 @@ class CityRepository {
     }
 
     async findCities(city){  
-       
+       try {
         const instance = axios.create({
             baseURL: `${this.pathBase}${city}.json`,
             params: {
@@ -28,6 +28,7 @@ class CityRepository {
         return response.data;
     }catch(err){
         throw err;
+        }
     }
 }
 
