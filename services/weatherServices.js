@@ -8,16 +8,16 @@ const weatherByCoordinates = async(lon, lat) => {
 
    logger.silly(JSON.stringify(weather));
 
-   /*return cities.features.map(e => {
+   
        return{
-           id: e.id,
-           name: e.place_name,
-           log: e.geometry.coordinates[0],
-           lat: e.geometry.coordinates[1],
-       }
-   });*/
+           name: weather.name,
+           description: weather.weather[0].description,
+            temperature: weather.main.temp,
+            temperatureMin: weather.main.temp_main,
+            temperatureMax: weather.main.temp_max
+   };
+ }
 
-}
 module.exports = {
     weatherByCoordinates
 }
